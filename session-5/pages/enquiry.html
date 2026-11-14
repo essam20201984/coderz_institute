@@ -21,17 +21,47 @@
     <p>
         إذا كان لديك أي استفسار حول الكورسات أو التسجيل، يرجى ملء النموذج أدناه.
     </p>
+<main>
+    <h1>استفسر عن الكورس</h1>
 
-    <form action="submit_enquiry.php" method="post">
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" name="name" required>
 
+    <form >
+        <p> 
+        <label for="Fullname">الاسم:</label>
+        <input type="text" id="Fullname" name="Full-name" placeholder="مثال: أحمد محمد" autocomplete="name" >
+        </p>
+        <p>
         <label for="email">البريد الإلكتروني:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="مثال: ahmed@example.com" >
+        </p>
+        <p>
 
-        <label for="message">رسالتك:</label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" placeholder="مثال: 07755544433" >
+        </p>
+        <p>
+            
+        <label for="course">الكورس:</label>
+        <select id="course" name="course">
+            <option value="">اختر الكورس</option>
+            <option value="content">HTML Content</option>
+            <option value="Forms">HTML Forms</option>
+        </select>
+        </p>
 
-        <button type="submit">إرسال الاستفسار</button>
+        <p>
+            <label for="Seats">عدد المقاعد:</label>
+            <input type="number" id="Seats" name="Seats" value="1" min="1" >
+        </p>
+        <p>
+            <label for="preferred-date">التاريخ المفضل:</label>
+            <input type="date" id="preferred-date" name="preferred-date">
+        </p>
+      <p>
+            <label for="message">نص الاستفسار</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+        </p>
+
+        <button type="submit">إرسال </button>
     </form>
 </html>
