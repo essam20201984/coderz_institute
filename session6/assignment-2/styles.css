@@ -1,0 +1,8 @@
+#course-title { color: purple; }
+.title { color: green; }
+h1 { color: navy; }
+.course-card { color: #374151; }
+/* Experiment 3: introductory paragraph only */
+.course-card > p { color: teal; }  
+a:hover { color: crimson; }
+a:focus { outline: 3px solid orange; }
