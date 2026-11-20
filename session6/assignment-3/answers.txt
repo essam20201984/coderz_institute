@@ -1,0 +1,84 @@
+اول اشي لاحظت اسم ملف css غلط
+<link rel="stylesheet" href="style.css">
+الصحيح ==> styles.css
+وبالتالي لن يعمل التنسيق
+ثانيا في ملف (css)
+h1, h2 {
+color: var(--brnad);
+}
+--brnad  ==> --brnad
+وبالتالي الالوان لن تعمل
+ثالثا
+ <h1 style="color: tomato;">coderz Institute</h1>
+ هذا inline style ,
+ وهو اقوى من التنسيق css فسيبقى لونه tomato
+ امسح style="color:  tomato;" كله، وخلي <h1>coderz .....
+ ثالثا
+ course-card {
+background: #eef5ff;
+}
+المفروض انه class يدأ ب نقطة
+رابعا
+.course-card p {
+  background: #fff4d9;
+}
+هذه تجعل جميع العناصر p تكون
+لونها صفراء 
+والاصل فقط الفقرة التعريفية خلفيتها صفراء
+الحل الصحيح :
+.course-card > p {
+  background: #fff4d9;
+}
+خامسا:
+
+ em حجم الخط المفروض 24 وهو طالع 30  لانك مستخدم   
+.course-card h2 {
+  font-size: 1.5em;
+}
+وهو لا ياخذ من الجذر او الجد بل ياخذ من ابيه مباشرة
+
+.course-card {
+  font-size: 20px;
+}
+1.5 * 20=30
+الحل:
+.course-card h2 {
+  font-size: 1.5rem;
+}
+1.5 * 16=24
+سادسا
+  <h2>CSS Foundations</h2>
+    CSS المفروض يظهر قبل الجملة نقطه ولم تكون موجودة فعليا ب 
+    .course-card h2::before {
+  color: var(--brand);
+}
+التنسيق الصحيح
+course-card h2::before {
+    content:"• ";
+  color: var(--brand);
+}
+اضفنا ==>  content:"• ";
+
+سابعا
+.action :hover {
+  color: #6845a8;
+}
+             منع من تنفيه 
+ :hover     و  .action  يوجد فراغ منع بين 
+  : الصحيح  
+  .action:hover {
+  color: #6845a8;
+}
+ 
+ : ثامنا  
+  صفو outline قياس  
+  .action:focus-visible {
+  outline: 0 solid orange;
+}
+ :صحيح  
+ .action:focus-visible {
+  outline:3px solid orange;
+}
+
+                
+
