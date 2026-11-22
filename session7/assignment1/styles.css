@@ -1,0 +1,101 @@
+:root {
+    --brand: #12546c;
+    --bg: #f4f7f8;
+    --card-bg: #ffffff;
+    --text: #5f6f78;
+    font: size 16px;
+}
+
+body {
+    background: var(--bg);
+    font-family: sans-serif;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 2px solid var(--brand);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 450px;
+    /* text-align: center; */
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 6px 16px rgba(18, 84, 108, 0.15)
+}
+
+.badge {
+    background: #e6f3d9;
+    color: #3a6b1a;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    /* position: absolute; */
+    top: 1rem;
+    right: 1rem;
+
+}
+
+.card h2 {
+    color: var(--brand);
+    font-size: 1.8rem;
+    /* margin-top: 2rem; */
+    margin: 0.8rem 0 0.5rem;
+}
+
+/* .card h2 ::before {
+    content: ".";
+    color: var(--brand);
+} */
+.description {
+    color: var(--text);
+    margin: 0 0 1.2rem;
+}
+
+.buttons {
+    display: flex;
+    /* justify-content: center; */
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid var(--brand);
+}
+
+.btn-primary {
+    background: var(--brand);
+    color: white;
+}
+
+.btn-outline {
+    background: white;
+    color: var(--brand);
+    border: 2px solid var(--brand);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+}
+
+.note {
+    color: var(--text);
+    font-size: 0.95rem;
+    margin: 0;
+}
