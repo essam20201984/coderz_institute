@@ -1,0 +1,146 @@
+:root {
+    --bg-page: #F1F5F9;
+    --bg-card: #FFFFFF;
+    --text-heading: #0F172A; 
+    --text-muted: #64748B;
+    /* لون الوصف و والمواعيد */
+
+    --border-thin: #CBD5E1;
+    /*  الحدود الرفيعة */
+
+    --color-blue: #0369A1;
+    /*(اللون الأزرق للبطاقة الأولى)*/
+
+    --bg-blue: #E0F2FE;
+    /*(خلفية شارة البطاقة الأولى) */
+
+    --color-green: #15803D;
+    /*(اللون الأخضر للبطاقة الثانية) */
+
+    --bg-green: #DCFCE7;
+    /*(خلفية شارة البطاقة الثانية) */
+}
+
+body {
+    background-color: var(--bg-page);
+    font-family: 'Cairo', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 40px 16px;
+}
+
+.page {
+    max-width: 520px; /* قريب جداً من عرض العمود في الصورة الأصلية */
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--text-heading);
+    margin: 0 0 6px 0;
+    font-size: 3.1rem; /* يجعل عرض "مواعيد اللقاءات" مقارباً لعرض البطاقات */
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+header p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-thin);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04); /* ظل خفيف جداً مثل الصورة */
+}
+.card h2 {
+    color: var(--text-heading);
+    margin: 0 0 8px 0;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.card .btn {
+    align-self: flex-start; /* يبقي زر "تفاصيل اللقاء" على اليسار في RTL */
+    display: inline-block;
+    padding: 9px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+/* .card h2 {
+    color: var(--text-heading);
+     margin: 0 0 8px 0;
+     font-size: 1.4rem;
+} */
+.card .description, .card .time {
+    color: var(--text-muted);
+    margin: 0 0 8px 0;
+    line-height: 1.6;
+}
+.badge {
+    display: inline-block;
+    align-self: flex-start; /* يمنع تمدد الشارة بعرض البطاقة */
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+/* .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    /* لا تضف text-align: left هنا */
+} */
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none; /* لإزالة الخط تحت الرابط */
+    font-weight: bold;
+}
+.card .time {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.card-html {
+    border-right: 4px solid var(--color-blue);
+}
+.card-html .badge {
+    background-color: var(--bg-blue);
+    color: var(--color-blue);
+}
+.card-html .btn {
+    background-color: var(--color-blue);
+    color: white;
+}
+
+/* تنسيق البطاقة الثانية (الخضراء) */
+.card-css {
+    border-right: 4px solid var(--color-green);
+}
+.card-css .badge {
+    background-color: var(--bg-green);
+    color: var(--color-green);
+}
+.card-css .btn {
+    background-color: var(--color-green);
+    color: white;
+}
